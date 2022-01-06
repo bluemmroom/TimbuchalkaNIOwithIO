@@ -1,6 +1,5 @@
 package com.bluemmroom;
 
-import javax.sound.midi.Soundbank;
 import java.io.*;
 import java.util.*;
 
@@ -37,7 +36,7 @@ public class Locations implements Map<Integer, Location> {
          *         }
          */
 
-        /** Data Output Stream Example
+        /**     Data Output Stream Example
          * try(DataOutputStream locFile = new DataOutputStream(new BufferedOutputStream(new FileOutputStream("locations.dat")))){
          *         for (Location location : locations.values()) {
          *             locFile.writeInt(location.getLocationID());
@@ -56,7 +55,7 @@ public class Locations implements Map<Integer, Location> {
          *     }
          */
 
-        /** Object Output Stream Example */
+        /**     Object Output Stream Example */
         try (ObjectOutputStream locFile = new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream("locations.dat")))) {
             for (Location location : locations.values()) {
                 locFile.writeObject(location);
@@ -66,7 +65,7 @@ public class Locations implements Map<Integer, Location> {
 
     static {
 
-        /** Data Input Stream Example
+        /**     Data Input Stream Example
          *try (DataInputStream locFile = new DataInputStream(new BufferedInputStream(new FileInputStream("locations.dat")))) {
          *             boolean eof = false;
          *             while (!eof) {
@@ -93,7 +92,7 @@ public class Locations implements Map<Integer, Location> {
          *         }
          */
 
-        /** Object Input Stream Example */
+        /**     Object Input Stream Example */
         try (ObjectInputStream locFile = new ObjectInputStream(new BufferedInputStream(new FileInputStream("locations.dat")))) {
             boolean eof = false;
             while (!eof) {
@@ -112,7 +111,7 @@ public class Locations implements Map<Integer, Location> {
             System.out.println("ClassNotFoundException " + e.getMessage());
         }
 
-        /** Buffered Reader Example and Scanner Example
+        /**     Buffered Reader Example and Scanner Example
          * try (Scanner scanner = new Scanner(new BufferedReader(new FileReader("locations_big.txt")))) {
          *             scanner.useDelimiter(",");
          *             while (scanner.hasNextLine()) {
@@ -153,7 +152,7 @@ public class Locations implements Map<Integer, Location> {
          *         }
          */
 
-        /** Oddiy holatda kiritilganda
+        /**     Oddiy holatda kiritilganda
          *  Map<String, Integer> tempExit;
          *         locations.put(0, new Location(0, "You are sitting in front of a computer learning Java", null));
          *
