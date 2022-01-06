@@ -18,7 +18,7 @@ public class Main {
         vocabulary.put("EAST", "E");
 
 
-        int loc = 64;
+        int loc = 131;
         while (true) {
             System.out.println(locations.get(loc).getDescription());
 
